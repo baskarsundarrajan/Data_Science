@@ -17,7 +17,7 @@ import seaborn as sns
 import math
 # %matplotlib inline
 
-github_link = "https://raw.githubusercontent.com/baskar/Data_Science/main/train.csv"
+github_link = "https://github.com/baskarsundarrajan/Data_Science/blob/baskarsundarrajan-patch-1/titanic1.py"
 
 dataset= pd.read_csv(github_link)
 dataset.head()
