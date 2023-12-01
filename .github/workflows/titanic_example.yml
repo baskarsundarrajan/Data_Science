@@ -1,0 +1,33 @@
+name: Python ML Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Replace with your Python version
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Replace with your dependencies file if needed
+
+    - name: Run Machine Learning Model
+      run: python titanic1.py  # Replace with your ML script
+
+    - name: Upload Results
+      uses: actions/upload-artifact@v2
+                echo "MODEL METRICS"
+                 cat metrics.txt
